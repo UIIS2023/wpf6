@@ -25,32 +25,18 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
 
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '4.7.2'  # Specify your project's .NET version
+      # Removed the Setup .NET Core step
 
       - name: Install SonarCloud scanner
         run: dotnet tool install --global dotnet-sonarscanner
         shell: powershell
 
       - name: Restore NuGet packages
-        run: dotnet restore WPFAerodrom.sln
+        run: msbuild -t:Restore WPFAerodrom.sln
         shell: powershell
 
       - name: Begin SonarCloud analysis
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: dotnet-sonarscanner begin /k:"UIIS2023_wpf6" /o:"uiis2023" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-        shell: powershell
-
-      - name: Build the project
-        run: msbuild /t:Rebuild /p:Configuration=Release WPFAerodrom.sln
-        shell: powershell
-
-      - name: End SonarCloud analysis
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-        shell: powershell
+        run: dotnet-sonarscanner begin /k:"UIIS2023_wpf6" /o:"uiis2023" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https
