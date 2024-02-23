@@ -1,0 +1,30 @@
+﻿<Window x:Class="WPFAerodrom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFAerodrom"
+        mc:Ignorable="d"
+        Title="Aerodrom" Height="350" Width="750">
+    <Grid Margin="0,0,-6.4,0">
+        <DataGrid Name="dataGridCentralni" HorizontalAlignment="Center"  Margin="208,132,0,0" VerticalAlignment="Center" 
+                  Height="auto" IsReadOnly="True" AlternatingRowBackground="Aqua" CanUserAddRows="False" SelectionUnit="FullRow" SelectionMode="Single"/>
+        <StackPanel HorizontalAlignment="Center" Height="30"  VerticalAlignment="Top" Width="auto" Orientation="Horizontal">
+            <Button Name="btnAvioKompanija" Content="AvioKompanija" HorizontalAlignment="Left" Width="90" Click="btnAvioKompanija_Click" Margin="0,0,0,0.4"/>
+            <Button Name="btnPrtljag" Content="Prtljag" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="30" Width="75" Click="btnPrtljag_Click"/>
+            <Button Name="btnLet" Content="Let" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="30" Width="75" Click="btnLet_Click"/>
+            <Button Name="btnPilot" Content="Pilot" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="30" Width="75" Click="btnPilot_Click"/>
+            <Button Name="btnPutnik" Content="Putnik" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="30" Width="75" Click="btnPutnik_Click"/>
+            <Button Name="btnAvion" Content="Avioni" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="30" Width="75" Click="btnAvion_Click"/>
+            <Button Name="btnOsoblje" Content="Osoblje" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="75" Click="btnOsoblje_Click"/>
+            <Button Name="btnTicket" Content="Ticket" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="75" Click="btnTicket_Click"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Height="30"  VerticalAlignment="Bottom" Width="auto" Orientation="Horizontal">
+            <Button Name="btnDodaj" Content="Dodaj" Width="120" Click="btnDodaj_Click"/>
+            <Button Name="btnIzmeni" Content="Izmeni" Width="120" Click="btnIzmeni_Click"/>
+            <Button Name="btnObrisi" Content="Obrisi" Width="120" Click="btnObrisi_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

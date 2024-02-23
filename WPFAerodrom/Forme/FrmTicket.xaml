@@ -1,0 +1,17 @@
+﻿<Window x:Class="WPFAerodrom.Forme.FrmTicket"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFAerodrom.Forme"
+        mc:Ignorable="d"
+        Title="Dodaj/Izmeni kartu" Height="200" Width="300">
+    <Grid>
+        <Label Content="Putnik:" HorizontalAlignment="Left" Margin="32,19,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cbPutnik" HorizontalAlignment="Left" Margin="121,19,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="ime" SelectedValuePath="putnikID" Height="26"/>
+        <Label Content="Let:" HorizontalAlignment="Left" Margin="32,73,0,0" VerticalAlignment="Top" Height="29" Width="46"/>
+        <ComboBox Name="cbLet" HorizontalAlignment="Left" Margin="121,73,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="destinacija" SelectedValuePath="letID" Height="29"/>
+        <Button Name="btnSacuvaj" Content="Sacuvaj" HorizontalAlignment="Left" Margin="32,139,0,0" VerticalAlignment="Top" Width="75" Click="btnSacuvaj_Click" Height="21"/>
+        <Button Name="btnOtkazi" Content="Otkazi" HorizontalAlignment="Left" Margin="168,139,0,0" VerticalAlignment="Top" Width="75" Click="btnOtkazi_Click" Height="21"/>
+    </Grid>
+</Window>

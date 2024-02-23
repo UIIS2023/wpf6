@@ -1,0 +1,19 @@
+﻿<Window x:Class="WPFAerodrom.Forme.FrmPutnik"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFAerodrom.Forme"
+        mc:Ignorable="d"
+        Title="Dodaj/Izmeni putnika" Height="300" Width="300">
+    <Grid>
+        <Label Content="Ime" HorizontalAlignment="Left" Margin="40,38,0,0" VerticalAlignment="Top"/>
+        <TextBox Name ="txtIme" HorizontalAlignment="Left" Height="23" Margin="112,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Prezime" HorizontalAlignment="Left" Margin="40,81,0,0" VerticalAlignment="Top"/>
+        <Label Content="Pasos:" HorizontalAlignment="Left" Margin="40,121,0,0" VerticalAlignment="Top"/>
+        <TextBox Name ="txtPrezime"  HorizontalAlignment="Left" Height="23" Margin="112,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name ="txtPasos" HorizontalAlignment="Left" Height="23" Margin="112,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btnSacuvaj"  Content="Sacuvaj" HorizontalAlignment="Left" Margin="40,186,0,0" VerticalAlignment="Top" Width="75" Click="btnSacuvaj_Click"/>
+        <Button Name="btnOtkazi"  Content="Otkazi" HorizontalAlignment="Left" Margin="157,186,0,0" VerticalAlignment="Top" Width="75" Click="btnOtkazi_Click"/>
+    </Grid>
+</Window>
